@@ -1,0 +1,298 @@
+/* === Simplified Retro Coffee Website === */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+}
+
+body {
+  background-color: #111;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 200px;
+  display: block;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #00ffee;
+}
+
+#logo {
+  font-size: 1.8rem;
+  color: #00ffee;
+}
+
+.navbar a {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 20px;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #222;
+  border-radius: 10px;
+  border: 2px dashed #00ffee;
+  padding: 2rem 1rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: #aad8d8;
+  margin-bottom: 1.5rem;
+}
+
+/* DOWNLOAD BUTTONS */
+.download-btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.download-btn img {
+  max-width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.download-btn img:hover {
+  transform: scale(1.05);
+}
+
+/* PROMO */
+.promo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background: #2a2a3f;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.promo-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.promo-text p {
+  color: #e0e0ff;
+  font-size: 1rem;
+}
+
+/* ABOUT US */
+.about-us {
+  background: #1d1d2e;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+
+.about-us-img{
+  display: flex;
+  width: 200px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.about-us-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;  
+}
+
+.about-us-section{
+  display: flex;
+  gap: 20px;
+}
+
+.quotes-wrap {
+  margin-top: 1rem;
+}
+
+.quotes-1 {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+.quotes-2 {
+  font-size: 0.9rem;
+  color: #ffccff;
+  margin-top: 0.3rem;
+}
+
+/* BUTTONS */
+.btn {
+  background: #00ffee;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #00ccdd;
+}
+
+.mission{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.mission-title{
+  font-size: 1.5rem;
+  color: #00ccdd;
+  margin-bottom: 0.5rem;
+}
+
+.vision {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+}
+
+.vision-title {
+  font-size: 1.5rem;
+  color: #00ccdd;
+  margin-bottom: 0.5rem;
+}
+
+.vision a, .vision p{
+  text-align: right;
+}
+
+/* General styling for the main story container */
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the .story-title and the .story-wrap-* blocks */
+  /* Removed padding: 20px 0; */
+  margin: 0;
+  padding: 0;
+}
+
+.story p{
+  color: white;
+}
+
+.story-title {
+  font-size: 2.5em; /* Example: Make title prominent */
+  font-weight: bold;
+  color: #333; /* Example color */
+  /* Removed margin-bottom: 40px; */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Ensures title text is centered */
+}
+
+.story .line{
+  width: 1px;
+  height: 50px;
+  background-color: white;/* Example color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Common styling for both left and right story wrappers */
+.story-wrap-left,
+.story-wrap-right {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  /* Removed margin-bottom: 30px; */
+  /* Removed gap: 20px; */
+  /* Removed padding: 0 15px; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the text content within the story */
+.story-text {
+  line-height: 1.6;
+  color: #555; /* Example color */
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the image within the story */
+.story-img {
+  padding: 0;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin: 0px 30px;
+  /* Removed border-radius: 8px; */
+  /* Removed box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+}
+
+/* Styling for the year text */
+.story-year {
+  font-weight: bold;
+  font-size: 1.5em; /* Example size */
+  color: #777; /* Example color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Specific alignments for children of .story-wrap-left */
+/* HTML order: story-text, story-img, story-year */
+.story-wrap-left .story-text {
+  grid-column: 1;
+  text-align: left;
+}
+.story-wrap-left .story-img {
+  grid-column: 2;
+}
+.story-wrap-left .story-year {
+  grid-column: 3;
+  text-align: left;
+}
+
+/* Specific alignments for children of .story-wrap-right */
+/* HTML order: story-year, story-img, story-text */
+.story-wrap-right .story-year {
+  grid-column: 1;
+  text-align: right;
+}
+.story-wrap-right .story-img {
+  grid-column: 2;
+}
+.story-wrap-right .story-text {
+  grid-column: 3;
+  text-align: right;
+}

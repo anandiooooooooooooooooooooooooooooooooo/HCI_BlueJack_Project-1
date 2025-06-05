@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="left">
+            <a href="./rewards.html">Rewards</a>
+            <a href="./about-us.html">About Us</a>
+        </nav>
+        <nav class="center">
+            <img src="../assets/icon/logo.png" alt="">
+            <p class="title">MR. COFFE</p>
+        </nav>
+        <nav class="right">
+            <a href="./menu.html">Menu</a>
+            <a href="./order.html">Order</a>
+        </nav>
+    </header>
+
+    <footer class="site-footer">
+        <div class="footer-section-1">
+            <div class="wrap-1">
+                <p class="main-text">Not Just Coffe, It's Mr. Coffe</p>
+            </div>
+            <div class="wrap-2">
+                <p class="wrap-2-header">About</p>
+                <div class="wrap-2-info">
+                    <a href="./index.html">Home</a>
+                    <a href="./rewards.html">Rewards</a>
+                    <a href="./menu.html">Menu</a>
+                    <a href="./order.html">Order</a>
+                </div>
+            </div>
+            <div class="wrap-3">
+                <p class="wrap-3-header">Download</p>
+                <div class="wrap-3-info">
+                    <img src="../assets/img/googleplay.png" alt="">
+                    <img src="../assets/img/appstore.png" alt="">
+                </div>
+            </div>
+            <div class="wrap-4">
+                <p class="wrap-4-header">Contant</p>
+                <div class="wrap-4-info">
+                    <div class="left">
+                        <p>Address:</p>
+                        <p>Number:</p>
+                        <p>Email:</p>
+                    </div>
+                    <div class="right">
+                        <p>Jl. Kopi No. 1, Jakarta, Indonesia</p>
+                        <p>021-123456789</p>
+                        <p>mr.coffe@email.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section-2">
+            <div class="left">
+                <img src="../assets/icon/logo.png" alt="">
+            </div>
+            <div class="right">
+                <p>© 2023 Mr. Coffe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .site-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: red;
+        }
+
+        .site-header> .center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-header> .center img{
+            max-height: 45px;
+        }
+
+        .site-header> .left, .site-header> .right{
+            display: flex;
+            gap: 30px;
+        }
+
+        .site-header a, .site-header p{
+            text-decoration: none;
+            color: aqua;
+        }
+
+
+        .site-footer{
+            padding: 20px 40px;
+            background-color: lightblue;
+        }
+
+        .site-footer> .footer-section-1{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .site-footer .wrap-1,
+        .site-footer .wrap-2,
+        .site-footer .wrap-3{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .site-footer .wrap-2> .wrap-2-info,
+        .site-footer .wrap-3> .wrap-3-info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .site-footer .wrap-3 img{
+            height: 30px;
+        }
+
+        .site-footer .wrap-4> .wrap-4-info{
+            display: flex;
+            gap: 20px;
+        }  
+
+        .site-footer .wrap-4 .left{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-footer .wrap-4 .right{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-footer> .footer-section-2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-footer> .footer-section-2 img{
+            height: 30px;
+        }
+    </style>
+</body>
+
+</html>
