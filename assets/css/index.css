@@ -1,40 +1,11 @@
-/* === Simplified Retro Coffee Website === */
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-/* === Reset Styles === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'VT323', monospace;
-}
-
-/* === Body === */
-body {
-  background-color: #111;
-  color: #f4f4f4;
-  line-height: 1.6;
-}
-
-.best-selling,
-.promo,
-.about-us {
-  padding: 40px 50px;
-  border-radius: 15px;
-}
-
-/* === Hero Section === */
+/* hero */
 .hero {
-  border-radius: 15px;
-  text-align: center;
-  background: #222;
-  border-radius: 10px;
-  border: 2px dashed #00ffee;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  border: 2px dashed #00ffee;
   gap: 1rem;
 }
 
@@ -43,87 +14,117 @@ body {
   color: #fff;
 }
 
-/* === Best Selling Section === */
+.hero-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+
+/* bestselling */
 .best-selling {
   background: #1e1e30;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-.best-selling img {
-  width: 170px;
-  height: 200px;
+.best-selling-title {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.best-selling-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background: #25253f;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.product-card-image {
+  width: 100%;
+  max-width: 170px;
+  height: 180px;
   display: block;
   border-radius: 8px;
   object-fit: cover;
 }
 
-.best-selling-title {
-  font-size: 1.5rem;
-  color: #ffcc00;
-  text-align: center;
-}
-
-.best-selling-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.best-selling-card {
+.product-card-details {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
-}
-
-.best-selling-text {
-  flex: 1;
+  justify-content: space-between;
+  flex-grow: 1;
   text-align: center;
 }
 
-.best-selling-name {
+.product-card-name {
   font-size: 1.2rem;
+  height: 100%;
+  color: #f4f4f4;
 }
 
-.best-selling-price {
+.product-card-price {
   color: #ccc;
   font-size: 1rem;
 }
 
-/* === Promo Section === */
-.promo {
+/* promotions */
+.promotions {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   background: #2a2a3f;
   border-radius: 10px;
 }
 
-.promo img{
-  height: 250px;
-  display: block;
-  object-fit: cover;
-}
-
-.promo-1,
-.promo-2 {
+.promo-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 20px;
 }
 
-.promo-text p {
+/* Adjusted image position for layout-image-right */
+.promo-item.layout-image-right {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.promo-item-image {
+  height: auto;
+  max-height: 250px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.promo-item-text {
+  flex-basis: 55%;
+  text-align: left;
+}
+
+.promo-item-description {
   color: #e0e0ff;
   font-size: 1rem;
-  text-align: justify;
 }
 
-/* === About Us Section === */
+/* about */
 .about-us {
   display: flex;
   flex-direction: column;
@@ -131,64 +132,69 @@ body {
   text-align: center;
   background: #1d1d2e;
   border-radius: 10px;
+  gap: 20px;
 }
 
-.about-us img {
-  width: 200px;
-  height: 200px;
+.ceo-photo {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
+  border: 3px solid #00ffee;
 }
 
-.quotes-wrap {
-  margin-top: 1rem;
+.quote-block {
+  margin-top: 0;
 }
 
-.quotes-1 {
+.quote-block-text {
   font-size: 1.1rem;
+  color: #f4f4f4;
 }
 
-.quotes-2 {
+.quote-block-attribution {
   font-size: 0.9rem;
   color: #ffccff;
+  margin-top: 0.5rem;
 }
 
-/* === Buttons === */
+/* buttons */
 .btn {
+  margin-top: 10px;
   background: #00ffee;
   color: #000;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
   font-weight: bold;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
 }
 
 .btn:hover {
   background: #00ccdd;
+  transform: translateY(-2px);
 }
 
-
+/* links */
 a {
   text-decoration: none;
   color: #00ffee;
 }
 
+a:hover {
+  color: #00ccdd;
+}
+
+/* header (elements) */
 #logo {
   font-size: 1.8rem;
   color: #00ffee;
+  font-weight: bold;
 }
 
 .navbar a {
   margin-left: 1rem;
   font-size: 1rem;
-}
-
-/* MAIN CONTENT */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 20px;
 }

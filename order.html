@@ -5,100 +5,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mr. Coffee - Order</title>
-    <link rel="icon" href="../assets/icon/logo.png" type="image/png">
+    <link rel="icon" href="../assets/icon/logo.png" type="image/png"> <!-- Adjust path if needed -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/_reset.css" />
-    <link rel="stylesheet" href="./assets/css/order.css" />
+    <!-- Assuming you have a _reset.css -->
+    <link rel="stylesheet" href="../assets/css/_reset.css" /> <!-- Adjust path if needed -->
+    <link rel="stylesheet" href="../assets/css/order.css" /> <!-- Ensure this points to your order page CSS -->
 </head>
 
 <body>
-    <div id="component-header"></div>
+    <!-- Header Component Placeholder -->
+    <div id="component-header">
+        <!-- Your header content will be loaded here by header-footer.js -->
+        <!-- Example: <header><nav>...</nav></header> -->
+    </div>
 
-    <div class="main-content">
+    <main class="main-content">
         <section class="form-container">
             <div class="header-text">
-                <h1>Your cup of joy is just few clicks away.</h1>
-                <p>Fill in the form below to order your favorite Mr. Coffe delights. We'll brew it fresh, pack it warm,
+                <h1>Your cup of joy is just a few clicks away.</h1>
+                <p>Fill in the form below to order your favorite Mr. Coffee delights. We'll brew it fresh, pack it warm,
                     and send it your way with love.</p>
             </div>
 
             <form id="coffeeOrderForm" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
                     <p id="fullNameError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     <p id="emailError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 08123456789">
+                    <p id="phoneError" class="error-message"></p>
+                </div>
+
+                <div class="form-group">
                     <label for="deliveryAddress">Delivery Address</label>
-                    <textarea id="deliveryAddress" name="deliveryAddress" rows="3" required></textarea>
+                    <textarea id="deliveryAddress" name="deliveryAddress" rows="4" required placeholder="Full address, including street, city, and postal code"></textarea>
                     <p id="addressError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
-                    <h3>Add-ons</h3>
+                    <h3>Add-ons (Optional)</h3>
                     <div class="addons-section">
                         <label class="addon-item">
                             <input type="checkbox" name="addon" value="2000" data-name="Extra Espresso Shot"
                                 class="addon-checkbox">
-                            <span class="addon-checkbox-icon"></span>
-                            <span class="addon-name">Extra Espresso Shot</span>
+                            <span class="addon-label-group">
+                                <span class="addon-checkbox-icon"></span>
+                                <span class="addon-name">Extra Espresso Shot</span>
+                            </span>
                             <span class="addon-price">+ Rp.2,000</span>
                         </label>
                         <label class="addon-item">
-                            <input type="checkbox" name="addon" value="2000" data-name="Oat Milk"
-                                class="addon-checkbox">
-                            <span class="addon-checkbox-icon"></span>
-                            <span class="addon-name">Oat Milk</span>
-                            <span class="addon-price">+ Rp.2,000</span>
+                            <input type="checkbox" name="addon" value="3000" data-name="Oat Milk" class="addon-checkbox"> <!-- Example: different price -->
+                             <span class="addon-label-group">
+                                <span class="addon-checkbox-icon"></span>
+                                <span class="addon-name">Oat Milk Substitute</span>
+                            </span>
+                            <span class="addon-price">+ Rp.3,000</span>
                         </label>
                         <label class="addon-item">
-                            <input type="checkbox" name="addon" value="2000" data-name="Vanilla Syrup"
-                                class="addon-checkbox">
-                            <span class="addon-checkbox-icon"></span>
-                            <span class="addon-name">Vanilla Syrup</span>
-                            <span class="addon-price">+ Rp.2,000</span>
+                            <input type="checkbox" name="addon" value="1500" data-name="Vanilla Syrup" class="addon-checkbox">
+                             <span class="addon-label-group">
+                                <span class="addon-checkbox-icon"></span>
+                                <span class="addon-name">Vanilla Syrup</span>
+                            </span>
+                            <span class="addon-price">+ Rp.1,500</span>
                         </label>
                         <label class="addon-item">
-                            <input type="checkbox" name="addon" value="2000" data-name="Caramel Drizzle"
-                                class="addon-checkbox">
-                            <span class="addon-checkbox-icon"></span>
-                            <span class="addon-name">Caramel Drizzle</span>
-                            <span class="addon-price">+ Rp.2,000</span>
+                            <input type="checkbox" name="addon" value="1500" data-name="Caramel Drizzle" class="addon-checkbox">
+                             <span class="addon-label-group">
+                                <span class="addon-checkbox-icon"></span>
+                                <span class="addon-name">Caramel Drizzle</span>
+                            </span>
+                            <span class="addon-price">+ Rp.1,500</span>
                         </label>
                         <label class="addon-item">
-                            <input type="checkbox" name="addon" value="2000" data-name="Whipped Cream"
-                                class="addon-checkbox">
-                            <span class="addon-checkbox-icon"></span>
-                            <span class="addon-name">Whipped Cream</span>
-                            <span class="addon-price">+ Rp.2,000</span>
+                            <input type="checkbox" name="addon" value="2500" data-name="Whipped Cream" class="addon-checkbox">
+                            <span class="addon-label-group">
+                                <span class="addon-checkbox-icon"></span>
+                                <span class="addon-name">Whipped Cream</span>
+                            </span>
+                            <span class="addon-price">+ Rp.2,500</span>
                         </label>
                     </div>
                 </div>
 
-                <div class="total-price-container">
-                    <p class="total-price-label">Total Price</p>
-                    <p id="totalPrice" class="total-price-value">Rp.25,000</p>
+                <div class="form-group">
+                    <label for="specialInstructions">Special Instructions (Optional)</label>
+                    <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Any specific requests for your order?"></textarea>
                 </div>
 
-                <p class="footer-text">"When you're ready, hit "Order now" and we'll get brewing!!"</p>
+
+                <div class="total-price-container">
+                    <p class="total-price-label">Total Price</p>
+                    <!-- This value should be updated by JavaScript based on selected items and add-ons -->
+                    <p id="totalPrice" class="total-price-value">Rp.0</p>
+                </div>
+
+                <p class="footer-text">"When you're ready, hit "Order Now" and we'll get brewing!!"</p>
 
                 <button type="submit" class="submit-button">Order Now!</button>
             </form>
         </section>
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="component-footer">
+        <!-- Your footer content will be loaded here by header-footer.js -->
+        <!-- Example: <footer><p>&copy; Mr. Coffee</p></footer> -->
     </div>
 
-    <div id="component-footer"></div>
+    <!-- Assume header-footer.js loads header and footer components -->
     <script type="module" src="../assets/js/header-footer.js"></script>
-    <script src="./assets/js/menu.js"></script>
+    <!-- You'll need a separate JavaScript file for order form logic (validation, price calculation) -->
+    <!-- <script src="../assets/js/order.js"></script> -->
 </body>
 
 </html>

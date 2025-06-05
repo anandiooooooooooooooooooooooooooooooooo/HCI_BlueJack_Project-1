@@ -1,33 +1,141 @@
-/* === Simplified Retro Coffee Website === */
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-/* === Reset Styles === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'VT323', monospace;
-}
-
-/* === Body === */
-body {
-    background-color: #111;
-    color: #f4f4f4;
-    line-height: 1.6;
-}
-
+/* overall menu page container */
 .menu {
-    padding: 40px 50px;
-    border-radius: 15px;
     background: #1e1e30;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 2px dashed #00ffee;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-/* === Buttons === */
+/* category navigation */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #00ffee44;
+}
+
+.category-button {
+    background: transparent;
+    color: #00ffee;
+    padding: 8px 15px;
+    border: 1px solid #00ffee;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.category-button:hover,
+.category-button.active {
+    background-color: #00ffee;
+    color: #111;
+}
+
+/* menu display area (image + item list) */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .menu-content {
+        flex-direction: row;
+    }
+}
+
+.menu-main-image-container {
+    flex: 1 1 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainMenuImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #00ffee77;
+}
+
+.menu-item-list-panel {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .menu-item-list-panel {
+        padding-left: 20px;
+    }
+}
+
+.menu-panel-title {
+    font-size: 2rem;
+    color: #ffcc00;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Comic Sans MS', 'VT323', cursive, sans-serif;
+}
+
+.menu-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5px;
+    border-bottom: 1px solid #00ffee33;
+    font-family: 'Comic Sans MS', 'VT323', cursive, sans-serif;
+    color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item:hover,
+.menu-item.active {
+    background-color: #00ffee22;
+}
+
+.menu-item-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.item-name-text {
+    font-size: 1.1rem;
+}
+
+.menu-item-price {
+    font-size: 1rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* buttons */
 .btn {
     background: #00ffee;
     color: #000;
@@ -35,34 +143,31 @@ body {
     border-radius: 4px;
     font-weight: bold;
     transition: background 0.2s;
+    border: none;
+    text-transform: uppercase;
 }
 
 .btn:hover {
     background: #00ccdd;
 }
 
-
+/* links */
 a {
     text-decoration: none;
     color: #00ffee;
 }
+a:hover {
+    color: #00ccdd;
+}
 
+/* header/logo elements */
 #logo {
     font-size: 1.8rem;
     color: #00ffee;
+    font-weight: bold;
 }
 
 .navbar a {
     margin-left: 1rem;
     font-size: 1rem;
-}
-
-/* MAIN CONTENT */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    gap: 20px;
 }
